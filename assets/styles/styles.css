@@ -17,6 +17,49 @@ body{
 body::-webkit-scrollbar{
     display: none;
 }
+#splash{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    z-index: 110;
+}
+#splash img:first-child{
+    width: 50vw;
+    margin-bottom: 30px;
+    scale: 0.9;
+    animation: getBigger 2s infinite alternate;
+}
+@keyframes getBigger {
+    to{
+        scale: 1;
+    }
+}
+
+.loader{
+    width: 200px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px;
+}
+.loader span{
+    border: 1px solid white;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    background-color: white;
+    border-radius: 50%;
+    transition: all 0.2s ease-in-out;
+}
+.loader span.jump{
+    transform: translateY(-20px);
+}
 /* On Scroll transitions */
 .animate{
     transition: all 0.7s ease-out;
