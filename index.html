@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+  style="
+    --highlight-color-2: rgb(240, 11, 240);
+    --highlight-color-1: rgb(235, 238, 62);
+    --border-tile-color: rgb(235, 238, 62);
+    --background-color: rgb(21,21,21);
+    --background-color-1: rgb(45 181 148);
+    --background-color-2: rgb(160, 21, 85);
+    --overlay-color: rgb(74, 45, 181);
+    --font-color: white;
+    --font-color-inverse: white;
+  "
+>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shubhrajit Sarkar</title>
+    <link rel="stylesheet" href="./assets/styles/styles.css" />
+    <link rel="stylesheet" href="./assets/styles/styles1.css" />
+    <link rel="stylesheet" href="./assets/styles/styles2.css" />
+    <link rel="stylesheet" href="./assets/styles/styles3.css" />
+    <link rel="stylesheet" href="./assets/styles/styles4.css" />
+    <script
+      src="https://kit.fontawesome.com/1454600ae4.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/script.js" defer></script>
+  </head>
+  <body>
+    <!-- <div class="mode hide">
+        <div>
+            <input type="checkbox" name="day-mode" id="day-mode-checkbox" class="active" hidden>
+            <input type="checkbox" name="night-mode" id="night-mode-checkbox" class="" hidden>
+            <label for="day-mode-checkbox"><i class="fa-solid fa-sun"></i></label>
+            <label for="night-mode-checkbox"><i class="fa-solid fa-moon"></i></label>
+        </div>
+        <span>
+            <input type="checkbox" id="showhidemode" checked hidden/>
+            <label for="showhidemode" id="showhidemodelabel"><</label>
+        </span>
+    </div> -->
+    <header>
+      <nav class="animate up">
+        <h2 id="logoHeading" class="animate left">Shubhrajit Sarkar</h2>
+        <input type="checkbox" id="showHamburgerMenu" hidden>
+        <label for="showHamburgerMenu">
+          <div class="hamburgerMenu hidden">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </label>
+        <div id="header-links" class="animate right">
+          <ul>
+            <li>About</li>
+            <li>Works</li>
+            <li class="tile">Get in Touch</li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <div id="currentPositionNavigation">
+      <span class="currentPositionNav"></span>
+      <span class="currentPositionNav"></span>
+      <span class="currentPositionNav"></span>
+      <span class="currentPositionNav"></span>
+      <span class="currentPositionNav"></span>
+      <span class="currentPositionNav"></span>
+    </div>
+    <main>
+      <article id="article1">
+        <div class="data-box animate up" id="personal-info">
+          <div id="personal-overlay" class="overlay"></div>
+          <div id="personal-image">
+            <img src="./assets/images/personal-picture.jpg" alt="My Picture" />
+          </div>
+          <div id="personal-data">
+            <p>Hi, I am</p>
+            <div class="typewriter"><p id="typewrittertext">Shubhrajit Sarkar</p></div>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti
+              quam cupiditate eum delectus, fugit quos esse neque vel impedit,
+              dolorum laborum saepe, distinctio laudantium eligendi aliquid? Cum
+              expedita possimus debitis dolores blanditiis harum aperiam natus
+              laborum deserunt, ea reprehenderit recusandae illum dolorem fuga
+              aliquid deleniti necessitatibus vel similique maxime autem?
+            </p>
+            <div id="social-links">
+              <a href="#">
+                <img src="./assets/images/cib-mail-ru.svg" alt="Gmail" title="Gmail" id="gmail">
+              </a>
+              <a href="https://www.linkedin.com/in/shubhrajit-sarkar-28330221b/" target=_blank>
+                <img id="linkedin" src="./assets/images/cib-linkedin-in.svg" alt="LinkedIn" title="LinkedIn" />
+              </a>              
+              <a href="https://github.com/Leo7479" target=_blank>
+                <img src="./assets/images/cib-github.svg" alt="Github" title="Github" id="github">
+              </a>
+              <a href="https://leetcode.com/u/shubhraijt7479/" target=_blank>
+                <img id="leetcode" src="./assets/images/cib-leetcode.svg" alt="Leetcode" title="LeetCode" />
+              </a>
+              <a href="https://www.hackerrank.com/profile/blazecuttergamer" target=_blank>
+                <img src="./assets/images/cib-hackerrank.svg" alt="HackerRank" title="HackerRank" id="hackerrank" />
+              </a>
+              <a href="https://www.facebook.com/profile.php?id=100089510101888" target=_blank>
+                <img src="./assets/images/cib-facebook.svg" alt="Facebook" title="Facebook" id="facebook">
+              </a>
+              <a href="https://www.instagram.com/mereal.leo/" target=_blank>
+                <img src="./assets/images/cib-instagram.svg" alt="Instagram" title="Instagram" id="instagram">
+              </a>
+              <a href="https://x.com/me_real_leo" target=_blank>
+                <img src="./assets/images/cib-twitter.svg" alt="Twitter/X" title="Twitter / X" id="twitter">                
+              </a>
+            </div>
+          </div>
+        </div>
+      </article>
+    </main>
+    <div class="scroll">
+      <div class="scroll-icon"></div>
+    </div>
+    <article id="article2">
+      <div id="works">
+        <h2 style="font-size: 3rem">My Works</h2>
+        <div id="webdevcontainer" class="workcontainer">
+          <h1>Web Development</h1>
+          <div class="cards">
+            <div class="card withphoto animate right">
+              <span>
+                <img
+                  src="./assets/images/project1-webdev.jfif"
+                  alt="Project Picture"
+                />
+              </span>
+              <span class="details">
+                <h2>Project1</h2>
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Dolores unde fugiat soluta quae cupiditate tempore, optio in,
+                  perferendis porro doloribus quibusdam autem quisquam
+                </p>
+                <span class="keypoints">
+                  <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>MySQL</li>
+                    <li>Php</li>
+                  </ul>
+                </span>
+              </span>
+            </div>
+            <div class="card withphoto animate right">
+              <span>
+                <img
+                  src="./assets/images/project1-webdev.jfif"
+                  alt="Project Picture"
+                />
+              </span>
+              <span class="details">
+                <h2>Project2</h2>
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Dolores unde fugiat soluta quae cupiditate tempore, optio in,
+                  perferendis porro doloribus quibusdam autem quisquam
+                  voluptate a libero?
+                </p>
+                <span class="keypoints">
+                  <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>MySQL</li>
+                    <li>Php</li>
+                  </ul>
+                </span>
+              </span>
+            </div>
+            <div class="card withphoto animate right">
+              <span>
+                <img
+                  src="./assets/images/project1-webdev.jfif"
+                  alt="Project Picture"
+                />
+              </span>
+              <span class="details">
+                <h2>Project3</h2>
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Dolores unde fugiat soluta quae cupiditate tempore, optio in,
+                  perferendis porro doloribus quibusdam autem quisquam
+                  voluptate a libero?
+                </p>
+                <span class="keypoints">
+                  <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>MySQL</li>
+                    <li>Php</li>
+                  </ul>
+                </span>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div id="softwaredevcontainer" class="workcontainer reverse">
+          <h1>Software Development</h1>
+          <div class="cards">
+            <div class="card withphoto animate left">
+              <span>
+                <img
+                  src="./assets/images/project1-webdev.jfif"
+                  alt="Project Picture"
+                />
+              </span>
+              <span class="details">
+                <h2>Project1</h2>
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Dolores unde fugiat soluta quae cupiditate tempore, optio in,
+                  perferendis porro doloribus quibusdam autem quisquam
+                </p>
+                <span class="keypoints">
+                  <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>MySQL</li>
+                    <li>Php</li>
+                  </ul>
+                </span>
+              </span>
+            </div>
+            <div class="card withphoto animate left">
+              <span>
+                <img
+                  src="./assets/images/project1-webdev.jfif"
+                  alt="Project Picture"
+                />
+              </span>
+              <span class="details">
+                <h2>Project2</h2>
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Dolores unde fugiat soluta quae cupiditate tempore, optio in,
+                  perferendis porro doloribus quibusdam autem quisquam
+                </p>
+                <span class="keypoints">
+                  <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>MySQL</li>
+                    <li>Php</li>
+                  </ul>
+                </span>
+              </span>
+            </div>
+            <div class="card withphoto animate left">
+              <span>
+                <img
+                  src="./assets/images/project1-webdev.jfif"
+                  alt="Project Picture"
+                />
+              </span>
+              <span class="details">
+                <h2>Project3</h2>
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Dolores unde fugiat soluta quae cupiditate tempore, optio in,
+                  perferendis porro doloribus quibusdam autem quisquam
+                </p>
+                <span class="keypoints">
+                  <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>MySQL</li>
+                    <li>Php</li>
+                  </ul>
+                </span>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div id="iotdevcontainer" class="workcontainer">
+          <h1>Internet Of Things Development</h1>
+          <div class="cards">
+            <div class="card withphoto animate right">
+              <span>
+                <img
+                  src="./assets/images/project1-webdev.jfif"
+                  alt="Project Picture"
+                />
+              </span>
+              <span class="details">
+                <h2>Project1</h2>
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Dolores unde fugiat soluta quae cupiditate tempore, optio in,
+                  perferendis porro doloribus quibusdam autem quisquam
+                </p>
+                <span class="keypoints">
+                  <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>MySQL</li>
+                    <li>Php</li>
+                  </ul>
+                </span>
+              </span>
+            </div>
+            <div class="card withphoto animate right">
+              <span>
+                <img
+                  src="./assets/images/project1-webdev.jfif"
+                  alt="Project Picture"
+                />
+              </span>
+              <span class="details">
+                <h2>Project2</h2>
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Dolores unde fugiat soluta quae cupiditate tempore, optio in,
+                  perferendis porro doloribus quibusdam autem quisquam
+                </p>
+                <span class="keypoints">
+                  <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>MySQL</li>
+                    <li>Php</li>
+                  </ul>
+                </span>
+              </span>
+            </div>
+            <div class="card withphoto animate right">
+              <span>
+                <img
+                  src="./assets/images/project1-webdev.jfif"
+                  alt="Project Picture"
+                />
+              </span>
+              <span class="details">
+                <h2>Project3</h2>
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Dolores unde fugiat soluta quae cupiditate tempore, optio in,
+                  perferendis porro doloribus quibusdam autem quisquam
+                </p>
+                <span class="keypoints">
+                  <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>MySQL</li>
+                    <li>Php</li>
+                  </ul>
+                </span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+    <article id="article3">
+      <div class="container">
+        <h1>My Education</h1>
+        <div class="cards horizontal">
+          <div class="card withoutPhoto withoutKey">
+            <span>
+              <h2>Computer Science and Engineering</h2>
+              <h3>MCKV INSTITUTE OF ENGINEERING</h3>
+              <p>
+                CGPA: 9.82
+              </p>
+            </span>
+          </div>
+          <div class="card withoutPhoto withoutKey">
+            <span>
+              <h2>12th Grade</h2>
+              <h3>RAIGANJ CORONATION HIGH SCHOOL</h3>
+              <p>
+                Grade: A+<br>
+                Passout: 2021
+              </p>
+            </span>
+          </div>
+          <div class="card withoutPhoto withoutKey">
+            <span>
+              <h2>Extra Courses</h2>
+              <h3>Udemy, Coursera, NPTEL</h3>
+              <p>
+                Done courses on Software Development, Web Development, Programming Languages, Data structures and Algorithms, Machine Learning.
+              </p>
+            </span>
+          </div>
+          <div class="card withoutPhoto withoutKey">
+            <span>
+              <h2>Extra Courses</h2>
+              <h3>Udemy, Coursera, NPTEL</h3>
+              <p>
+                Done courses on Software Development, Web Development, Programming Languages, Data structures and Algorithms, Machine Learning.
+              </p>
+            </span>
+          </div>
+        </div>
+      </div>
+    </article>
+    <div class="upArrowContainer hide">
+      <a href="#" id="upArrow">
+        <i class="fa-solid fa-angle-up"></i>
+      </a>
+    </div>
+    <footer></footer>
+  </body>
+  <script></script>
+</html>

@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Helvetica, sans-serif, serif;
+    scroll-behavior: smooth;
+}
+body{
+    overflow-x: hidden;
+    background: rgb(21, 21, 21);
+    color: var(--font-color);
+    width: 98vw;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+body::-webkit-scrollbar{
+    display: none;
+}
+/* On Scroll transitions */
+.animate{
+    transition: all 0.7s ease-out;
+}
+.up{
+    top: -10px;
+}
+.down{
+    top: 10px;
+}
+.left{
+    left: -10px;
+}
+.right{
+    left: 10px;
+}
+.getUp, .getDown{
+    top: 0;
+    left: 0;
+    opacity: 1;
+}
+.getLeft, .getRight{
+    left: 0;
+    top: 0;
+    opacity: 1;
+}
+/* Scroll Icon */
+.scroll{
+    width: 100vw;
+    height: 15vh;
+}
+.scroll-icon{
+    margin: auto;
+    width: 30px;
+    height: 70px;
+    border: 2px solid var(--highlight-color-1);
+    border-radius: 20px;
+    position: relative;
+}
+.scroll-icon::before{
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: var(--highlight-color-1);
+    border-radius: 50%;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: down 1s infinite;
+}
+@keyframes down{
+    to{
+        top: 60%;
+        opacity: 0.1;
+    }
+}
