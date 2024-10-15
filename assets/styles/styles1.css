@@ -275,7 +275,7 @@ article{
         border-right: 2px solid var(--highlight-color-1);
     }
     100%{
-        border-right: none;
+        border-right: 2px solid transparent;
     }
 }
 #personal-data #social-links{
@@ -392,6 +392,9 @@ article{
         backdrop-filter: none;
         background-color: rgb(21, 21, 21);
     }
+    nav h2{
+        font-size: 25px;
+    }
     nav div#header-links{
         position: fixed;
         right: 0;
@@ -410,7 +413,17 @@ article{
         visibility: visible;
         left: 0%;
     }
-    article{
+    nav input[type="checkbox"]:checked ~ div#header-links li#tile::before{
+        animation: aura 1.5s infinite;
+    }
+    nav input[type="checkbox"]:not(:checked) ~ div#header-links li#tile::before{
+        animation: none;
+    }
+    main{
+        position: relative;
+        top: 10vh;
+    }
+    article:not(#article1){
         top: 10vh;
     }
     div.scroll{
@@ -426,11 +439,23 @@ article{
         }
         & div#personal-image{
             justify-content: center;
+            & img{
+                height: 200px;
+            }
         }
         & div#personal-data{
             place-items: center;
             & p{
+                font-size: 1rem;
                 text-align: center;
+            }
+            & p#typewrittertext{
+                font-size: 1.5rem;
+            }
+        }
+        & div#social-links{
+            & a img{
+                width: 1.8rem;
             }
         }
     }
