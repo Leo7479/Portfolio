@@ -45,7 +45,7 @@
 .card.withphoto{
     min-height: fit-content;
     /* max-height: 400px; */
-    min-width: 350px;
+    min-width: 250px;
     max-width: 550px;
     background-color: transparent;
     margin-bottom: 25px;
