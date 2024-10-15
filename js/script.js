@@ -8,7 +8,7 @@ var upArrow = document.getElementsByClassName("upArrowContainer")[0];
 var article1 = document.getElementById("personal-info");
 var horizontalScrollCards = document.getElementsByClassName("cards horizontal")
 var typewrittertext = document.getElementById("typewrittertext");
-
+var start = Date.now();
 
 var loaderSpan = document.getElementsByClassName('loaderspan');
 let jumpCounter = 0;
@@ -17,15 +17,6 @@ setInterval(()=>{
     jumpCounter = (jumpCounter+1)%4;
     loaderSpan[jumpCounter].classList.add('jump');
 },200);
-window.addEventListener('load', ()=>{
-    const splashDiv = document.getElementById('splash');
-    splashDiv.style.display="none";
-    animatable.forEach((a)=>{observer.observe(a)});
-    registerButton.addEventListener("click", ()=>{
-        window.open("https://forms.gle/a2F854fL54QmoMjh6", "_blank");
-    });
-})
-
 const ob = new IntersectionObserver((entry)=>{
     entry.forEach((e)=>{
         if(e.isIntersecting){
@@ -37,7 +28,21 @@ const ob = new IntersectionObserver((entry)=>{
     })
     
 });
-ob.observe(article1);
+const splashScreen = document.getElementById("splash");
+window.addEventListener('load', ()=>{
+    var present = Date.now();
+    if ((present-start)<100){
+        setTimeout(()=>{
+            splashScreen.style.visibility = 'hidden';
+        }, 1000);
+    }else{
+        splashScreen.style.visibility = "hidden";
+    }
+    
+    ob.observe(article1);
+})
+
+
 
 
 // On Scroll Behaviours
