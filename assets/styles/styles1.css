@@ -207,6 +207,7 @@ article{
     width: 95vw;
     height: 85vh;
     overflow: hidden;
+    align-items: center;
     margin: auto;
 }
 .data-box{
@@ -219,7 +220,6 @@ article{
     grid-template-rows: auto;
     place-content: center;
     column-gap: 15px;
-    margin: auto;
 }
 #personal-image{
     display: flex;
@@ -337,8 +337,6 @@ article{
     display: flex;
     height: 110%;
     width: 80%;
-    top: 50%;
-    transform: translateY(-50%);
     right: 0;
     background: linear-gradient(to right, var(--background-color-1), var(--background-color-2));
     z-index: -1;
@@ -406,8 +404,34 @@ article{
             flex-direction: column;
             row-gap: 25px;
         }
+        visibility: hidden;
     }
     nav input[type="checkbox"]:checked ~ div#header-links{
+        visibility: visible;
         left: 0%;
+    }
+    article{
+        top: 10vh;
+    }
+    div.scroll{
+        position: relative;
+        top: 12vh;
+    }
+    article#article1 div#personal-info{
+        grid-template-columns: 100%;
+        & div#personal-overlay{
+            width: 100%;
+            height: 80%;
+            bottom: 0;
+        }
+        & div#personal-image{
+            justify-content: center;
+        }
+        & div#personal-data{
+            place-items: center;
+            & p{
+                text-align: center;
+            }
+        }
     }
 }
