@@ -27,6 +27,10 @@
     text-align: center;
     z-index: 1001;
 }
+.underConstruction .overlayer img{
+    width: 100%;
+    max-width: 400px;
+}
 .underConstruction .overlayer button{
     position: absolute;
     top: 0;
