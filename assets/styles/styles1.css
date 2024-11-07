@@ -195,21 +195,35 @@ nav input[type="checkbox"]:checked ~ label div.hamburgerMenu{
 }
 
 /* Articles */
-article{
+article:not(#article1){
     width: 100vw;
     display: flex;
     justify-content: center;
     margin: auto;
 }
 
+main{
+    position: relative;
+    top: 10vh;
+}
 /* First Page */
 #article1{
+    display: flex;
     position: relative;
     width: 95vw;
-    height: 85vh;
+    height: 90vh;
     overflow: hidden;
     align-items: center;
+    justify-content: center;
     margin: auto;
+}
+article:not(#article1){
+    position: relative;
+    top: 10vh;
+}
+div.scroll{
+    position: relative;
+    top: 12vh;
 }
 .data-box{
     width: 95%;
@@ -252,16 +266,16 @@ article{
 #personal-data div.typewriter{
     display: inline-block;
     width: max-content;
-    & p{
-        width: 100%;
-        font-size: 2rem;
-        color: var(--highlight-color-1);
-        border-right: 2px solid var(--highlight-color-1);
-        overflow: hidden;
-        white-space: nowrap;
-        letter-spacing: 1px;
-        animation: typewriter 2s steps(17) 2s infinite alternate,blink 800ms steps(17) infinite;
-    }
+}
+#personal-data div.typewriter p{
+    width: 100%;
+    font-size: 2rem;
+    color: var(--highlight-color-1);
+    border-right: 2px solid var(--highlight-color-1);
+    overflow: hidden;
+    white-space: nowrap;
+    letter-spacing: 1px;
+    animation: typewriter 2s steps(17) 2s infinite alternate,blink 800ms steps(17) infinite;
 }
 @keyframes typewriter {
     0% {
@@ -404,11 +418,11 @@ article{
         backdrop-filter: blur(25px);
         left: 100%;
         transition: all 0.3s ease-in-out;
-        & ul{
-            flex-direction: column;
-            row-gap: 25px;
-        }
         visibility: hidden;
+    }
+    nav div#header-links ul{
+        flex-direction: column;
+        row-gap: 25px;
     }
     nav input[type="checkbox"]:checked ~ div#header-links{
         visibility: visible;
@@ -420,47 +434,36 @@ article{
     nav input[type="checkbox"]:not(:checked) ~ div#header-links li#tile::before{
         animation: none;
     }
-    main{
-        position: relative;
-        top: 10vh;
-    }
-    article#article1{
-        height: 75vh;
-    }
-    article:not(#article1){
-        top: 10vh;
-    }
-    div.scroll{
-        position: relative;
-        top: 12vh;
-    }
     article#article1 div#personal-info{
         grid-template-columns: 100%;
-        & div#personal-overlay{
-            width: 100%;
-            height: 80%;
-            bottom: 0;
-        }
-        & div#personal-image{
-            justify-content: center;
-            & img{
-                height: 200px;
-            }
-        }
-        & div#personal-data{
-            place-items: center;
-            & p{
-                font-size: 1rem;
-                text-align: center;
-            }
-            & p#typewrittertext{
-                font-size: 1.5rem;
-            }
-        }
-        & div#social-links{
-            & a img{
-                width: 1.8rem;
-            }
-        }
     }
+    div#personal-data{
+        place-items: center;
+    }
+    div#personal-data p{
+        font-size: 1rem;
+        text-align: center;
+    }
+    div#personal-data p#typewrittertext{
+        font-size: 1.5rem;
+    }
+    div#personal-overlay{
+        width: 100%;
+        height: 80%;
+        bottom: 0;
+    }
+    div#personal-image{
+        justify-content: center;
+    }
+    div#personal-image img{
+        height: 200px;
+    }
+    div#social-links a img{
+        width: 1.8rem;
+    }
+}
+@media only screen and (min-height: 750px){
+    article#article1{
+        height: 75vh;
+    }    
 }
