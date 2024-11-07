@@ -28,18 +28,20 @@ const ob = new IntersectionObserver((entry)=>{
     })
     
 });
+const underConstruction = document.getElementsByClassName("underConstruction")[0];
 const splashScreen = document.getElementById("splash");
 window.addEventListener('load', ()=>{
     var present = Date.now();
     if ((present-start)<100){
         setTimeout(()=>{
             splashScreen.style.visibility = 'hidden';
+            ob.observe(article1);
+            underConstruction.style.display = "flex";
         }, 1000);
     }else{
         splashScreen.style.visibility = "hidden";
     }
     
-    ob.observe(article1);
 })
 
 
@@ -67,4 +69,4 @@ let i = 0;
 setTimeout(()=>{setInterval(()=>{
     typewrittertext.textContent = roles[i];
     i = (i + 1) % roles.length;
-}, 4000)}, 1000);
+}, 4000)}, 2000);
