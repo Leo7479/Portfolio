@@ -30,19 +30,19 @@ const ob = new IntersectionObserver((entry)=>{
 });
 const underConstruction = document.getElementsByClassName("underConstruction")[0];
 const splashScreen = document.getElementById("splash");
-window.addEventListener('load', ()=>{
-    var present = Date.now();
-    if ((present-start)<100){
-        setTimeout(()=>{
-            splashScreen.style.visibility = 'hidden';
-            ob.observe(article1);
-            underConstruction.style.display = "flex";
-        }, 1000);
-    }else{
-        splashScreen.style.visibility = "hidden";
-    }
-    
-})
+splashScreen.style.visibility = "hidden";
+// window.addEventListener('load', ()=>{
+//     var present = Date.now();
+//     if ((present-start)<100){
+//         setTimeout(()=>{
+//             splashScreen.style.visibility = 'hidden';
+//             ob.observe(article1);
+//             underConstruction.style.display = "flex";
+//         }, 1000);
+//     }else{
+//         splashScreen.style.visibility = "hidden";
+//     }
+// })
 
 
 
@@ -70,3 +70,15 @@ setTimeout(()=>{setInterval(()=>{
     typewrittertext.textContent = roles[i];
     i = (i + 1) % roles.length;
 }, 4000)}, 2000);
+
+
+const workSection = document.getElementsByClassName("workSection");
+for(let i=0;i<workSection.length;i++){
+    workSection[i].addEventListener('click', ()=>{
+        for(let j=0;j<workSection.length;j++){
+            if(workSection[j].classList.contains("activeWork"))
+                workSection[j].classList.remove("activeWork");
+        }
+        workSection[i].classList.add("activeWork");
+    })
+}

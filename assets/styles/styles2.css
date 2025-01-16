@@ -36,98 +36,107 @@
     height: max-content;
 }
 .cards{
-    display: grid;
-    width: 100%;
-    grid-template-columns: repeat(3, 32%);
-    gap:20px;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
 }
 .card.withphoto{
-    min-height: fit-content;
-    /* max-height: 400px; */
-    min-width: 250px;
-    max-width: 550px;
-    background-color: transparent;
-    margin-bottom: 25px;
-    border-radius: 15px;
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.card.withphoto span:first-child{
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
     position: relative;
-    border: 1px solid green;
-    & span img{
-        width: 100%;
-    }
-    & span.details{
-        padding: 2em;
-        background:rgba(10, 10, 10, 0.7);
-        position: absolute;
-        top: 0;
-        right: -50%;
-        display: none;
-        height: 100%;
-        text-align: justify;
-    }
-    & span.details{
-        & p{
-            font-size: 0.9rem;
-        }
-    }
-    & span.keypoints ul{
-        margin-top: 20px;
-        display: flex;
-        justify-content: flex-start;
-        flex-wrap: wrap;
-        align-items: center;
-        column-gap: 10px;
-        row-gap: 10px;
-        list-style: none;
-        font-size: 1rem;
-        & li{
-            padding: 0.5rem;
-            border: 2px solid white;
-            border-radius: 10px;
-            &:hover{
-                background-color: yellow;
-                color: black;
-                border: 2px solid yellow;
-                cursor: pointer;
-            }
-        }
-    }
-    &::after, &::before{
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        padding: 5px;
-        background-image: conic-gradient(#ff4545, #00ff99, #006aff, #ff0095, #ff4545);
-        z-index: -1;
-        visibility: hidden;
-    }
-    &::before{
-        filter: blur(1rem);
-    }
-    &:hover{
-        span.details{
-            display: unset;
-            right: 0;
-        }
-        &::before, &::after{
-            visibility: visible;
-        }
-    }
+    transition: all 0.2s ease-in-out;
 }
-@media only screen and (max-width: 1025px){
-    .cards{
-        grid-template-columns: repeat(2, 45%);
-    }
+.card.withphoto span:first-child::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 22px;
+    z-index: -1;
+    transition: all 0.3s ease-in-out;
+    background-image: linear-gradient(130deg, var(--highlight-color-1), var(--highlight-color-2));
+    
 }
-@media only screen and (max-width: 800px){
-    .workcontainer{
-        padding: 6px;
-    }
-    .cards{
-        grid-template-columns: 100%;
-    }
+.card.withphoto:hover span:first-child::before{
+    transform: scale(1.04);
+}
+.card.withphoto span:first-child img{
+    border-radius: 20px;
+    width: 100%;
+}
+.card.withphoto span.details{
+    width: 55%;
+}
+span.keypoints ul{
+    list-style: none;
+    background: transparent;;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-wrap: wrap;
+}
+span.keypoints ul li{
+    border: 3px solid var(--background-color-2);
+    background-color: transparent;
+    border-radius: 25px;
+    padding: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: all 0.1s ease-out;
+    font-weight: 500;
+}
+span.keypoints ul li:hover, span.keypoints ul li:focus{
+    background-color: var(--background-color-2);
+    transform: scale(1.1);
+    color: white;
+}
+span.details h2{
+    width: fit-content;
+    background-image: linear-gradient(130deg,var(--highlight-color-1), var(--highlight-color-2));
+    margin-bottom: 15px;
+    font-size: 2rem;
+    background-clip: text;
+    color: transparent;
+}
+span.details p{
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+#workSelectionDiv{
+    border: 2px solid rgb(15,15,15);
+    padding: 10px;
+    font-size: 1.3rem;
+    border-radius: 40px;
+    background-color: rgb(15,15,15);
+}
+#workSelectionDiv ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    gap: 20px;
+}
+#workSelectionDiv ul li{
+    padding: 8px;
+    transition: all 0.1s ease-in-out;
+    border-radius: 40px;
+}
+#workSelectionDiv ul li:hover{
+    cursor: pointer;
+}
+.activeWork{
+    background-color: rgb(40, 40, 40);
 }
