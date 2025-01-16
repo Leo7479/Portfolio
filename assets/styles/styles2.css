@@ -116,11 +116,19 @@ span.details p{
     margin-bottom: 20px;
 }
 #workSelectionDiv{
+    margin-top: 25px;
+    position: sticky;
+    top: 15vh;
     border: 2px solid rgb(15,15,15);
     padding: 10px;
     font-size: 1.3rem;
     border-radius: 40px;
     background-color: rgb(15,15,15);
+    z-index: 9;
+    transition: all 0.1s ease-in-out;
+}
+#workSelectionDiv:hover{
+    filter: none;
 }
 #workSelectionDiv ul{
     display: flex;
