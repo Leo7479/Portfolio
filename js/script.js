@@ -72,13 +72,23 @@ setTimeout(()=>{setInterval(()=>{
 }, 4000)}, 2000);
 
 
-const workSection = document.getElementsByClassName("workSection");
-for(let i=0;i<workSection.length;i++){
-    workSection[i].addEventListener('click', ()=>{
-        for(let j=0;j<workSection.length;j++){
-            if(workSection[j].classList.contains("activeWork"))
-                workSection[j].classList.remove("activeWork");
+const workSectionSelection = document.getElementsByClassName("workSection");
+const workSection = document.getElementsByClassName("workcontainer");
+for(let i=0;i<workSectionSelection.length;i++){
+    workSectionSelection[i].addEventListener('click', ()=>{
+        for(let j=0;j<workSectionSelection.length;j++){
+            if(workSectionSelection[j].classList.contains("activeWork")){
+                workSectionSelection[j].classList.remove("activeWork");
+                break;
+            }
         }
-        workSection[i].classList.add("activeWork");
+        workSectionSelection[i].classList.add("activeWork");
+        for(let j=0;j<workSection.length;j++){
+            if(workSection[j].classList.contains("activeWorkSection")){
+                workSection[j].classList.remove("activeWorkSection");
+                break;
+            }
+        }
+        workSection[i].classList.add("activeWorkSection");
     })
 }

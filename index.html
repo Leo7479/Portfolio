@@ -5,7 +5,7 @@
     --highlight-color-2: rgb(240, 11, 240);
     --highlight-color-1: rgb(235, 238, 62);
     --border-tile-color: rgb(235, 238, 62);
-    --background-color: rgb(21,21,21);
+    --background-color: rgb(21, 21, 21);
     --background-color-1: rgb(45 181 148);
     --background-color-2: rgb(160, 21, 85);
     --overlay-color: rgb(74, 45, 181);
@@ -17,20 +17,28 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shubhrajit Sarkar</title>
-    <link rel="stylesheet" href="./assets/styles/temp.css">
+    <link rel="stylesheet" href="./assets/styles/temp.css" />
     <link rel="stylesheet" href="./assets/styles/styles.css" />
     <link rel="stylesheet" href="./assets/styles/styles1.css" />
     <link rel="stylesheet" href="./assets/styles/styles2.css" />
     <link rel="stylesheet" href="./assets/styles/styles3.css" />
     <link rel="stylesheet" href="./assets/styles/styles4.css" />
-    <link rel="shortcut icon" href="./assets/images/favicon.png" type="image/x-icon">
+    <link
+      rel="shortcut icon"
+      href="./assets/images/favicon.png"
+      type="image/x-icon"
+    />
     <script
       src="https://kit.fontawesome.com/1454600ae4.js"
       crossorigin="anonymous"
     ></script>
-    <script src="./js/script.js" defer></script><link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <script src="./js/script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div id="splash">
@@ -46,20 +54,24 @@
       <div class="underlayer"></div>
       <div class="overlayer">
         <button id="removeUnderConstruction">X</button>
-        <img src="./assets/images/underConstruction.png" alt="Under Construction">
+        <img
+          src="./assets/images/underConstruction.png"
+          alt="Under Construction"
+        />
       </div>
     </div>
     <script>
       const btn = document.getElementById("removeUnderConstruction");
-      btn.addEventListener("click",()=>{
-        let underConstruction = document.getElementsByClassName("underConstruction")[0];
-        underConstruction.style.display='none';
+      btn.addEventListener("click", () => {
+        let underConstruction =
+          document.getElementsByClassName("underConstruction")[0];
+        underConstruction.style.display = "none";
       });
     </script>
     <header>
       <nav class="animate up">
         <h2 id="logoHeading" class="animate left">Shubhrajit Sarkar</h2>
-        <input type="checkbox" id="showHamburgerMenu" hidden>
+        <input type="checkbox" id="showHamburgerMenu" hidden />
         <label for="showHamburgerMenu">
           <div class="hamburgerMenu hidden">
             <span></span>
@@ -85,7 +97,9 @@
           </div>
           <div id="personal-data">
             <p>Hi, I am</p>
-            <div class="typewriter"><p id="typewrittertext">Shubhrajit Sarkar</p></div>
+            <div class="typewriter">
+              <p id="typewrittertext">Shubhrajit Sarkar</p>
+            </div>
             <p>
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti
               quam cupiditate eum delectus, fugit quos esse neque vel impedit,
@@ -96,28 +110,77 @@
             </p>
             <div id="social-links">
               <a href="#">
-                <img src="./assets/images/cib-mail-ru.svg" alt="Gmail" title="Gmail" id="gmail">
+                <img
+                  src="./assets/images/cib-mail-ru.svg"
+                  alt="Gmail"
+                  title="Gmail"
+                  id="gmail"
+                />
               </a>
-              <a href="https://www.linkedin.com/in/shubhrajit-sarkar-28330221b/" target=_blank>
-                <img id="linkedin" src="./assets/images/cib-linkedin-in.svg" alt="LinkedIn" title="LinkedIn" />
-              </a>              
-              <a href="https://github.com/Leo7479" target=_blank>
-                <img src="./assets/images/cib-github.svg" alt="Github" title="Github" id="github">
+              <a
+                href="https://www.linkedin.com/in/shubhrajit-sarkar-28330221b/"
+                target="_blank"
+              >
+                <img
+                  id="linkedin"
+                  src="./assets/images/cib-linkedin-in.svg"
+                  alt="LinkedIn"
+                  title="LinkedIn"
+                />
               </a>
-              <a href="https://leetcode.com/u/shubhraijt7479/" target=_blank>
-                <img id="leetcode" src="./assets/images/cib-leetcode.svg" alt="Leetcode" title="LeetCode" />
+              <a href="https://github.com/Leo7479" target="_blank">
+                <img
+                  src="./assets/images/cib-github.svg"
+                  alt="Github"
+                  title="Github"
+                  id="github"
+                />
               </a>
-              <a href="https://www.hackerrank.com/profile/blazecuttergamer" target=_blank>
-                <img src="./assets/images/cib-hackerrank.svg" alt="HackerRank" title="HackerRank" id="hackerrank" />
+              <a href="https://leetcode.com/u/shubhraijt7479/" target="_blank">
+                <img
+                  id="leetcode"
+                  src="./assets/images/cib-leetcode.svg"
+                  alt="Leetcode"
+                  title="LeetCode"
+                />
               </a>
-              <a href="https://www.facebook.com/profile.php?id=100089510101888" target=_blank>
-                <img src="./assets/images/cib-facebook.svg" alt="Facebook" title="Facebook" id="facebook">
+              <a
+                href="https://www.hackerrank.com/profile/blazecuttergamer"
+                target="_blank"
+              >
+                <img
+                  src="./assets/images/cib-hackerrank.svg"
+                  alt="HackerRank"
+                  title="HackerRank"
+                  id="hackerrank"
+                />
               </a>
-              <a href="https://www.instagram.com/mereal.leo/" target=_blank>
-                <img src="./assets/images/cib-instagram.svg" alt="Instagram" title="Instagram" id="instagram">
+              <a
+                href="https://www.facebook.com/profile.php?id=100089510101888"
+                target="_blank"
+              >
+                <img
+                  src="./assets/images/cib-facebook.svg"
+                  alt="Facebook"
+                  title="Facebook"
+                  id="facebook"
+                />
               </a>
-              <a href="https://x.com/me_real_leo" target=_blank>
-                <img src="./assets/images/cib-twitter.svg" alt="Twitter/X" title="Twitter / X" id="twitter">                
+              <a href="https://www.instagram.com/mereal.leo/" target="_blank">
+                <img
+                  src="./assets/images/cib-instagram.svg"
+                  alt="Instagram"
+                  title="Instagram"
+                  id="instagram"
+                />
+              </a>
+              <a href="https://x.com/me_real_leo" target="_blank">
+                <img
+                  src="./assets/images/cib-twitter.svg"
+                  alt="Twitter/X"
+                  title="Twitter / X"
+                  id="twitter"
+                />
               </a>
             </div>
           </div>
@@ -137,245 +200,247 @@
             <li class="workSection">IoT-Dev</li>
           </ul>
         </div>
-        <div id="webdevcontainer" class="workcontainer">
-          <h1>Web Development</h1>
-          <div class="cards">
-            <div class="card withphoto animate right">
-              <span>
-                <img
-                  src="./assets/images/project1-webdev.jfif"
-                  alt="Project Picture"
-                />
-              </span>
-              <span class="details">
-                <h2>Project1</h2>
-                <p>
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Dolores unde fugiat soluta quae cupiditate tempore, optio in,
-                  perferendis porro doloribus quibusdam autem quisquam
-                </p>
-                <span class="keypoints">
-                  <ul>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>JavaScript</li>
-                    <li>MySQL</li>
-                    <li>Php</li>
-                  </ul>
+        <div class="work">
+          <div id="webdevcontainer" class="workcontainer activeWorkSection">
+            <h1>Web Development</h1>
+            <div class="cards">
+              <div class="card withphoto animate right">
+                <span>
+                  <img
+                    src="./assets/images/project1-webdev.jfif"
+                    alt="Project Picture"
+                  />
                 </span>
-              </span>
-            </div>
-            <div class="card withphoto animate right">
-              <span>
-                <img
-                  src="./assets/images/project1-webdev.jfif"
-                  alt="Project Picture"
-                />
-              </span>
-              <span class="details">
-                <h2>Project2</h2>
-                <p>
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Dolores unde fugiat soluta quae cupiditate tempore, optio in,
-                  perferendis porro doloribus quibusdam autem quisquam
-                  voluptate a libero?
-                </p>
-                <span class="keypoints">
-                  <ul>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>JavaScript</li>
-                    <li>MySQL</li>
-                    <li>Php</li>
-                  </ul>
+                <span class="details">
+                  <h2>Project1</h2>
+                  <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Dolores unde fugiat soluta quae cupiditate tempore, optio
+                    in, perferendis porro doloribus quibusdam autem quisquam
+                  </p>
+                  <span class="keypoints">
+                    <ul>
+                      <li>HTML</li>
+                      <li>CSS</li>
+                      <li>JavaScript</li>
+                      <li>MySQL</li>
+                      <li>Php</li>
+                    </ul>
+                  </span>
                 </span>
-              </span>
-            </div>
-            <div class="card withphoto animate right">
-              <span>
-                <img
-                  src="./assets/images/project1-webdev.jfif"
-                  alt="Project Picture"
-                />
-              </span>
-              <span class="details">
-                <h2>Project3</h2>
-                <p>
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Dolores unde fugiat soluta quae cupiditate tempore, optio in,
-                  perferendis porro doloribus quibusdam autem quisquam
-                  voluptate a libero?
-                </p>
-                <span class="keypoints">
-                  <ul>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>JavaScript</li>
-                    <li>MySQL</li>
-                    <li>Php</li>
-                  </ul>
+              </div>
+              <div class="card withphoto animate right">
+                <span>
+                  <img
+                    src="./assets/images/project1-webdev.jfif"
+                    alt="Project Picture"
+                  />
                 </span>
-              </span>
-            </div>
-          </div>
-        </div>
-        <div id="softwaredevcontainer" class="workcontainer reverse">
-          <h1>Software Development</h1>
-          <div class="cards">
-            <div class="card withphoto animate left">
-              <span>
-                <img
-                  src="./assets/images/project1-webdev.jfif"
-                  alt="Project Picture"
-                />
-              </span>
-              <span class="details">
-                <h2>Project1</h2>
-                <p>
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Dolores unde fugiat soluta quae cupiditate tempore, optio in,
-                  perferendis porro doloribus quibusdam autem quisquam
-                </p>
-                <span class="keypoints">
-                  <ul>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>JavaScript</li>
-                    <li>MySQL</li>
-                    <li>Php</li>
-                  </ul>
+                <span class="details">
+                  <h2>Project2</h2>
+                  <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Dolores unde fugiat soluta quae cupiditate tempore, optio
+                    in, perferendis porro doloribus quibusdam autem quisquam
+                    voluptate a libero?
+                  </p>
+                  <span class="keypoints">
+                    <ul>
+                      <li>HTML</li>
+                      <li>CSS</li>
+                      <li>JavaScript</li>
+                      <li>MySQL</li>
+                      <li>Php</li>
+                    </ul>
+                  </span>
                 </span>
-              </span>
-            </div>
-            <div class="card withphoto animate left">
-              <span>
-                <img
-                  src="./assets/images/project1-webdev.jfif"
-                  alt="Project Picture"
-                />
-              </span>
-              <span class="details">
-                <h2>Project2</h2>
-                <p>
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Dolores unde fugiat soluta quae cupiditate tempore, optio in,
-                  perferendis porro doloribus quibusdam autem quisquam
-                </p>
-                <span class="keypoints">
-                  <ul>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>JavaScript</li>
-                    <li>MySQL</li>
-                    <li>Php</li>
-                  </ul>
+              </div>
+              <div class="card withphoto animate right">
+                <span>
+                  <img
+                    src="./assets/images/project1-webdev.jfif"
+                    alt="Project Picture"
+                  />
                 </span>
-              </span>
-            </div>
-            <div class="card withphoto animate left">
-              <span>
-                <img
-                  src="./assets/images/project1-webdev.jfif"
-                  alt="Project Picture"
-                />
-              </span>
-              <span class="details">
-                <h2>Project3</h2>
-                <p>
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Dolores unde fugiat soluta quae cupiditate tempore, optio in,
-                  perferendis porro doloribus quibusdam autem quisquam
-                </p>
-                <span class="keypoints">
-                  <ul>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>JavaScript</li>
-                    <li>MySQL</li>
-                    <li>Php</li>
-                  </ul>
+                <span class="details">
+                  <h2>Project3</h2>
+                  <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Dolores unde fugiat soluta quae cupiditate tempore, optio
+                    in, perferendis porro doloribus quibusdam autem quisquam
+                    voluptate a libero?
+                  </p>
+                  <span class="keypoints">
+                    <ul>
+                      <li>HTML</li>
+                      <li>CSS</li>
+                      <li>JavaScript</li>
+                      <li>MySQL</li>
+                      <li>Php</li>
+                    </ul>
+                  </span>
                 </span>
-              </span>
+              </div>
             </div>
           </div>
-        </div>
-        <div id="iotdevcontainer" class="workcontainer">
-          <h1>Internet Of Things Development</h1>
-          <div class="cards">
-            <div class="card withphoto animate right">
-              <span>
-                <img
-                  src="./assets/images/project1-webdev.jfif"
-                  alt="Project Picture"
-                />
-              </span>
-              <span class="details">
-                <h2>Project1</h2>
-                <p>
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Dolores unde fugiat soluta quae cupiditate tempore, optio in,
-                  perferendis porro doloribus quibusdam autem quisquam
-                </p>
-                <span class="keypoints">
-                  <ul>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>JavaScript</li>
-                    <li>MySQL</li>
-                    <li>Php</li>
-                  </ul>
+          <div id="softwaredevcontainer" class="workcontainer reverse">
+            <h1>Software Development</h1>
+            <div class="cards">
+              <div class="card withphoto animate left">
+                <span>
+                  <img
+                    src="./assets/images/project1-webdev.jfif"
+                    alt="Project Picture"
+                  />
                 </span>
-              </span>
+                <span class="details">
+                  <h2>Project1</h2>
+                  <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Dolores unde fugiat soluta quae cupiditate tempore, optio
+                    in, perferendis porro doloribus quibusdam autem quisquam
+                  </p>
+                  <span class="keypoints">
+                    <ul>
+                      <li>HTML</li>
+                      <li>CSS</li>
+                      <li>JavaScript</li>
+                      <li>MySQL</li>
+                      <li>Php</li>
+                    </ul>
+                  </span>
+                </span>
+              </div>
+              <div class="card withphoto animate left">
+                <span>
+                  <img
+                    src="./assets/images/project1-webdev.jfif"
+                    alt="Project Picture"
+                  />
+                </span>
+                <span class="details">
+                  <h2>Project2</h2>
+                  <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Dolores unde fugiat soluta quae cupiditate tempore, optio
+                    in, perferendis porro doloribus quibusdam autem quisquam
+                  </p>
+                  <span class="keypoints">
+                    <ul>
+                      <li>HTML</li>
+                      <li>CSS</li>
+                      <li>JavaScript</li>
+                      <li>MySQL</li>
+                      <li>Php</li>
+                    </ul>
+                  </span>
+                </span>
+              </div>
+              <div class="card withphoto animate left">
+                <span>
+                  <img
+                    src="./assets/images/project1-webdev.jfif"
+                    alt="Project Picture"
+                  />
+                </span>
+                <span class="details">
+                  <h2>Project3</h2>
+                  <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Dolores unde fugiat soluta quae cupiditate tempore, optio
+                    in, perferendis porro doloribus quibusdam autem quisquam
+                  </p>
+                  <span class="keypoints">
+                    <ul>
+                      <li>HTML</li>
+                      <li>CSS</li>
+                      <li>JavaScript</li>
+                      <li>MySQL</li>
+                      <li>Php</li>
+                    </ul>
+                  </span>
+                </span>
+              </div>
             </div>
-            <div class="card withphoto animate right">
-              <span>
-                <img
-                  src="./assets/images/project1-webdev.jfif"
-                  alt="Project Picture"
-                />
-              </span>
-              <span class="details">
-                <h2>Project2</h2>
-                <p>
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Dolores unde fugiat soluta quae cupiditate tempore, optio in,
-                  perferendis porro doloribus quibusdam autem quisquam
-                </p>
-                <span class="keypoints">
-                  <ul>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>JavaScript</li>
-                    <li>MySQL</li>
-                    <li>Php</li>
-                  </ul>
+          </div>
+          <div id="iotdevcontainer" class="workcontainer">
+            <h1>Internet Of Things Development</h1>
+            <div class="cards">
+              <div class="card withphoto animate right">
+                <span>
+                  <img
+                    src="./assets/images/project1-webdev.jfif"
+                    alt="Project Picture"
+                  />
                 </span>
-              </span>
-            </div>
-            <div class="card withphoto animate right">
-              <span>
-                <img
-                  src="./assets/images/project1-webdev.jfif"
-                  alt="Project Picture"
-                />
-              </span>
-              <span class="details">
-                <h2>Project3</h2>
-                <p>
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Dolores unde fugiat soluta quae cupiditate tempore, optio in,
-                  perferendis porro doloribus quibusdam autem quisquam
-                </p>
-                <span class="keypoints">
-                  <ul>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>JavaScript</li>
-                    <li>MySQL</li>
-                    <li>Php</li>
-                  </ul>
+                <span class="details">
+                  <h2>Project1</h2>
+                  <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Dolores unde fugiat soluta quae cupiditate tempore, optio
+                    in, perferendis porro doloribus quibusdam autem quisquam
+                  </p>
+                  <span class="keypoints">
+                    <ul>
+                      <li>HTML</li>
+                      <li>CSS</li>
+                      <li>JavaScript</li>
+                      <li>MySQL</li>
+                      <li>Php</li>
+                    </ul>
+                  </span>
                 </span>
-              </span>
+              </div>
+              <div class="card withphoto animate right">
+                <span>
+                  <img
+                    src="./assets/images/project1-webdev.jfif"
+                    alt="Project Picture"
+                  />
+                </span>
+                <span class="details">
+                  <h2>Project2</h2>
+                  <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Dolores unde fugiat soluta quae cupiditate tempore, optio
+                    in, perferendis porro doloribus quibusdam autem quisquam
+                  </p>
+                  <span class="keypoints">
+                    <ul>
+                      <li>HTML</li>
+                      <li>CSS</li>
+                      <li>JavaScript</li>
+                      <li>MySQL</li>
+                      <li>Php</li>
+                    </ul>
+                  </span>
+                </span>
+              </div>
+              <div class="card withphoto animate right">
+                <span>
+                  <img
+                    src="./assets/images/project1-webdev.jfif"
+                    alt="Project Picture"
+                  />
+                </span>
+                <span class="details">
+                  <h2>Project3</h2>
+                  <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Dolores unde fugiat soluta quae cupiditate tempore, optio
+                    in, perferendis porro doloribus quibusdam autem quisquam
+                  </p>
+                  <span class="keypoints">
+                    <ul>
+                      <li>HTML</li>
+                      <li>CSS</li>
+                      <li>JavaScript</li>
+                      <li>MySQL</li>
+                      <li>Php</li>
+                    </ul>
+                  </span>
+                </span>
+              </div>
             </div>
           </div>
         </div>
@@ -389,9 +454,7 @@
             <span>
               <h2>Computer Science and Engineering</h2>
               <h3>MCKV INSTITUTE OF ENGINEERING</h3>
-              <p>
-                CGPA: 9.82
-              </p>
+              <p>CGPA: 9.82</p>
             </span>
           </div>
           <div class="card withoutPhoto withoutKey">
@@ -399,7 +462,7 @@
               <h2>12th Grade</h2>
               <h3>RAIGANJ CORONATION HIGH SCHOOL</h3>
               <p>
-                Grade: A+<br>
+                Grade: A+<br />
                 Passout: 2021
               </p>
             </span>
@@ -409,7 +472,9 @@
               <h2>Extra Courses</h2>
               <h3>Udemy, Coursera, NPTEL</h3>
               <p>
-                Done courses on Software Development, Web Development, Programming Languages, Data structures and Algorithms, Machine Learning.
+                Done courses on Software Development, Web Development,
+                Programming Languages, Data structures and Algorithms, Machine
+                Learning.
               </p>
             </span>
           </div>
@@ -418,7 +483,9 @@
               <h2>Extra Courses</h2>
               <h3>Udemy, Coursera, NPTEL</h3>
               <p>
-                Done courses on Software Development, Web Development, Programming Languages, Data structures and Algorithms, Machine Learning.
+                Done courses on Software Development, Web Development,
+                Programming Languages, Data structures and Algorithms, Machine
+                Learning.
               </p>
             </span>
           </div>
