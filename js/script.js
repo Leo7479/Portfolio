@@ -30,18 +30,17 @@ const ob = new IntersectionObserver((entry)=>{
 });
 const underConstruction = document.getElementsByClassName("underConstruction")[0];
 const splashScreen = document.getElementById("splash");
-splashScreen.style.visibility = "hidden";
 window.addEventListener('load', ()=>{
     var present = Date.now();
     if ((present-start)<1000){
         setTimeout(()=>{
-            splashScreen.style.visibility = 'hidden';
             ob.observe(article1);
+            splashScreen.style.visibility = 'hidden';
             underConstruction.style.display = "flex";
         }, 1000);
     }else{
-        splashScreen.style.visibility = "hidden";
         ob.observe(article1);
+        splashScreen.style.visibility = "hidden";
         underConstruction.style.display = "flex";
     }
 })
