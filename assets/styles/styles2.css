@@ -96,7 +96,6 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    border: 2px solid red;
 }
 .card.withphoto span:first-child{
     width: 40%;
@@ -136,7 +135,7 @@ span.keypoints ul{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    border: 2px solid blue;
+    gap: 10px;
 }
 span.keypoints ul li{
     border: 3px solid var(--background-color-2);
@@ -170,4 +169,27 @@ div.work > div:not(.activeWorkSection){
     position: absolute;
     transform: scale(0.0);
     opacity: 0;
+}
+
+@media only screen and (max-width: 850px){
+    .card.withphoto{
+        flex-direction: column;
+        align-items: unset;
+    }
+    .cards{
+        padding: 0px;
+    }
+    .card.withphoto span.details, .card.withphoto span:first-child{
+        width: 100%;
+    }
+    #article2{
+        padding: 0.2rem;
+    }
+    #workSelectionDiv{
+        font-size: 1rem;
+    }
+    span.details h2{
+        width: 100%;
+        text-align: center;
+    }
 }

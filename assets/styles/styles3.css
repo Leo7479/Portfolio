@@ -73,3 +73,6 @@
 .cards::-webkit-scrollbar-thumb{
     background-color: var(--highlight-color-2);
 }
+.cards::-webkit-slider-runnable-track{
+  background-color: var(--highlight-color-1);
+}
