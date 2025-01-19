@@ -33,7 +33,7 @@ const splashScreen = document.getElementById("splash");
 splashScreen.style.visibility = "hidden";
 window.addEventListener('load', ()=>{
     var present = Date.now();
-    if ((present-start)<100){
+    if ((present-start)<1000){
         setTimeout(()=>{
             splashScreen.style.visibility = 'hidden';
             ob.observe(article1);
@@ -41,6 +41,8 @@ window.addEventListener('load', ()=>{
         }, 1000);
     }else{
         splashScreen.style.visibility = "hidden";
+        ob.observe(article1);
+        underConstruction.style.display = "flex";
     }
 })
 
