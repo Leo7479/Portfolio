@@ -96,6 +96,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    border: 2px solid red;
 }
 .card.withphoto span:first-child{
     width: 40%;
@@ -130,11 +131,12 @@
 }
 span.keypoints ul{
     list-style: none;
-    background: transparent;;
+    background: transparent;
+    width: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
-    text-wrap: wrap;
+    flex-wrap: wrap;
+    border: 2px solid blue;
 }
 span.keypoints ul li{
     border: 3px solid var(--background-color-2);
@@ -144,7 +146,7 @@ span.keypoints ul li{
     margin-right: 10px;
     cursor: pointer;
     transition: all 0.1s ease-out;
-    font-size: 00.9em;
+    font-size: 0.9em;
     font-weight: 500;
 }
 span.keypoints ul li:hover, span.keypoints ul li:focus{
