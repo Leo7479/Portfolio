@@ -43,21 +43,35 @@ nav label div.hamburgerMenu{
     justify-content: center;
     row-gap: 8px;
     cursor: pointer;
-    & span{
-        display: inline-block;
-        width: 40px;
-        height: 5px;
-        background-color: white;
-        transition: all 0.3s ease-in-out;
-    }
+}
+div.hamburgerMenu span{
+    display: inline-block;
+    width: 40px;
+    height: 5px;
+    background-color: white;
+    transition: all 0.3s ease-in-out;
+}
+div.hamburgerMenu span:first-child{
+    width: 20px;
+}
+div.hamburgerMenu span:nth-child(2){
+    width: 30px;
+    position: relative;
+    left: 10px;
+}
+div.hamburgerMenu span:last-child{
+    width: 30px;
 }
 nav input[type="checkbox"]:checked ~ label div.hamburgerMenu{
+    span{
+        width: 40px;
+    }
     & span:first-child{
         transform-origin: left;
         transform: rotateZ(40deg);
     }
     & span:nth-child(2){
-        visibility: hidden;
+        transform: scale(0);
     }
     & span:last-child{
         transform-origin: left;
